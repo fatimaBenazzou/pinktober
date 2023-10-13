@@ -5,7 +5,7 @@ function setThemeInWeb(theme: ThemesI) {
     localStorage.setItem("theme", theme);
 }
 
-export const themes = ["luxury", "UPS-theme"] as const;
+export const themes = ["luxury", "pinktober-theme"] as const;
 export type ThemesI = (typeof themes)[number];
 
 const loadedTheme = localStorage.getItem("theme");
@@ -14,7 +14,7 @@ const initial_state: ThemesI =
         ? (loadedTheme as ThemesI)
         : window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
         ? "luxury"
-        : "UPS-theme";
+        : "pinktober-theme";
 
 setThemeInWeb(initial_state);
 
@@ -23,7 +23,7 @@ const theme = createSlice<ThemesI, SliceCaseReducers<ThemesI>, "theme">({
     initialState: initial_state,
     reducers: {
         setTheme: (state, action: { type: string; payload: ThemesI }) => {
-            state = action.payload ?? "UPS-theme";
+            state = action.payload ?? "pinktober-theme";
             setThemeInWeb(state);
             return state;
         },

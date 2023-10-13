@@ -1,5 +1,5 @@
-import { EyeIcon } from "@heroicons/react/24/solid";
 import { FieldInputProps } from "formik";
+import { Eye } from "iconsax-react";
 import { useState } from "react";
 // md:max-w-md
 type InputI = {
@@ -44,12 +44,12 @@ export function Input({
 				{defaultType === "password" ? (
 					<button
 						type="button"
-						className="btn btn-ghost btn-circle btn-sm absolute right-0 top-0 translate-y-1/4 -translate-x-1/4 focus:active:translate-y-1/4 focus:active:-translate-x-1/4  "
+						className="btn text-secondary btn-ghost btn-circle btn-sm absolute right-0 top-0 translate-y-1/4 -translate-x-1/4 focus:active:translate-y-1/4 focus:active:-translate-x-1/4  "
 						onClick={() => {
 							setInputType((i) => (i === "password" ? "text" : "password"));
 						}}
 					>
-						<EyeIcon className="w-5 h-5" />
+						<Eye className="w-5 h-5" />
 					</button>
 				) : icon ? (
 					<div className="absolute right-0 top-0 translate-y-2/3 -translate-x-2/3">{icon}</div>

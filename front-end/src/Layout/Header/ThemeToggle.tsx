@@ -11,13 +11,13 @@ export function ThemeToggle() {
 			className="swap "
 			onClick={(e) => {
 				e.preventDefault();
-				setTheme(theme === "luxury" ? "UPS-theme" : "luxury");
+				setTheme(theme === "luxury" ? "pinktober-theme" : "luxury");
 				return false;
 			}}
 		>
 			<input type="checkbox" id="darkModeSwitcher" />
 			<SunIcon className={"fill-current w-6 h-6 " + (theme === "luxury" ? "swap-on" : "swap-off")} />
-			<MoonIcon className={"fill-current w-6 h-6 " + (theme === "UPS-theme" ? "swap-on" : "swap-off")} />
+			<MoonIcon className={"fill-current w-6 h-6 " + (theme === "pinktober-theme" ? "swap-on" : "swap-off")} />
 		</label>
 	);
 }

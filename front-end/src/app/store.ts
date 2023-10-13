@@ -6,9 +6,7 @@ import rightDrawer from "@/app/context/rightDrawer";
 import headerSlice from "@/app/context/header";
 import language from "@/app/context/language";
 import modal from "@/app/context/modal";
-import lead from "@/app/context/lead";
 import theme from "@/app/context/theme";
-import desk from "@/app/context/desk";
 import serverNotification from "@/app/context/serverNotification";
 
 // import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
@@ -22,9 +20,7 @@ export const store = configureStore({
 		[Api.reducerPath]: Api.reducer,
 		user,
 		notifications,
-		lead,
 		theme,
-		desk,
 		serverNotification
 	},
 	middleware: (defaultMiddleware) => defaultMiddleware().concat(Api.middleware),

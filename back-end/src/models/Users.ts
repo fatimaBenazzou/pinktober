@@ -120,22 +120,22 @@ usersSchema.methods.comparePasswords = async function (candidatePassword: string
 };
 const usersModel = model<UserI, UserModel>("Users", usersSchema);
 export default usersModel;
-/* const user: UserI = {
-	email: "madadiyoucef@live.fr",
-	username: "dinarUser",
-	password: "12345678",
-	firstName: "Youcef",
-	lastName: "Madadi",
-	phoneNumber: "0699999999",
-	dateOfBirth: new Date(),
-	enabled: true,
-	deviceTokens: [],
-	address: {
-		street: "Rue de la ",
-		city: "Paris",
-		postalCode: "75000",
-		country: "France",
-	},
-	Accounts: {},
-};
-usersModel.create(user); */
+// const user: UserI = {
+// 	email: "b.fati2102@gmail.com",
+// 	username: "pinkyUser",
+// 	password: "12345678",
+// 	firstName: "Fatima",
+// 	lastName: "Benazzou",
+// 	phoneNumber: "0699999999",
+// 	dateOfBirth: new Date(),
+// 	enabled: true,
+// 	deviceTokens: [],
+// 	address: {
+// 		street: "Rue de la ",
+// 		city: "Paris",
+// 		postalCode: "75000",
+// 		country: "France",
+// 	},
+// 	Accounts: {},
+// };
+// usersModel.create(user); 
