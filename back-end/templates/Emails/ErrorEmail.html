@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Backend Server Alert</title>
+    </head>
+    <body style="font-family: Arial, sans-serif; margin: 0; padding: 0">
+        <!--{MediaURL} static file location -->
+        <!--{ProjectMaker} company name -->
+        <!--{2} error code number -->
+        <!--{3} error message -->
+        <!--{4} website URL -->
+        <!--{5} project name -->
+        <table
+            cellpadding="0"
+            cellspacing="0"
+            width="100%"
+            style="border-collapse: collapse; background-color: #f1f1f1"
+        >
+            <tr>
+                <td align="center" style="padding: 20px 0">
+                    <table
+                        cellpadding="0"
+                        cellspacing="0"
+                        width="600"
+                        style="border-collapse: collapse; background-color: #fff; border: 1px solid #ccc"
+                    >
+                        <tr>
+                            <td align="center" style="padding: 20px">
+                                <img
+                                    src="{MediaURL}/email/Company-logo.png"
+                                    alt="{ProjectMaker} Logo"
+                                    width="150"
+                                    style="display: block; margin: 0 auto"
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 20px">
+                                <h1 style="margin-bottom: 10px; color: #070626">{ProjectName}</h1>
+                                <h2 style="margin-bottom: 10px; color: #e74c3c">Backend Server Alert</h2>
+                                <p>We regret to inform you that the backend server is currently down.</p>
+                                <p style="font-size: 24px; font-weight: bold; color: #e74c3c">
+                                    Error Code: {ErrorCode}
+                                </p>
+                                <p style="font-size: 16px; color: #333">Error Message: {ErrorMessage}</p>
+                                <p>
+                                    Our team is aware of the issue and working diligently to resolve it as soon as
+                                    possible.
+                                </p>
+                                <p>
+                                    We apologize for any inconvenience this may cause. We will keep you updated with the
+                                    progress and notify you once the issue is resolved.
+                                </p>
+                                <p style="font-weight: bold; color: #333">Sincerely,</p>
+                                <p style="color: #333">{ProjectMaker} Team</p>
+                            </td>
+                        </tr>
+                        <!-- <tr>
+                            <td align="center" style="padding: 20px">
+                                <a
+                                    href="{4}"
+                                    style="
+                                        display: inline-block;
+                                        background-color: #3498db;
+                                        color: #fff;
+                                        text-decoration: none;
+                                        padding: 10px 20px;
+                                        border-radius: 5px;
+                                    "
+                                >
+                                    Visit Our Website
+                                </a>
+                            </td>
+                        </tr> -->
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

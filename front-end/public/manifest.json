@@ -1,0 +1,49 @@
+{
+	"id": "DiNAR",
+	"short_name": "DiNAR",
+	"name": "DiNAR",
+	"description": "DiNAR app to manage Cash and to spend more reasonably.",
+	"icons": [
+		{
+			"src": "/logo.svg",
+			"sizes": "96x96 128x128 256x256 512x512",
+			"type": "image/svg+xml",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "/favicon.ico",
+			"sizes": "32x32"
+		},
+		{
+			"src": "/logo16.png",
+			"type": "image/png",
+			"sizes": "16x16"
+		},
+		{
+			"src": "/logo64.png",
+			"type": "image/png",
+			"sizes": "64x64"
+		},
+		{
+			"src": "/logo192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "/logo512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	],
+	"start_url": "/",
+	"scope": "/",
+	"orientation": "portrait-primary",
+	"display_override": [
+		"window-control-overlay",
+		"minimal-ui"
+	],
+	"prefer_related_applications": true,
+	"display": "standalone",
+	"theme_color": "#000000",
+	"background_color": "#ffffff"
+}

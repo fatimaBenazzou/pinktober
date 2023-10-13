@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Reset Email</title>
+		<style>
+			html {
+				width: 100%;
+				height: 100%;
+			}
+			body {
+				margin: 0;
+				width: 100%;
+				background-color: #1a0000;
+			}
+			.container {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				max-width: 600px;
+				width: 96%;
+				margin-top: 50px;
+				margin-bottom: 50px;
+				margin-left: auto;
+				margin-right: auto;
+				height: 100%;
+				background-color: #292929;
+				color: #848484;
+				padding: 20px;
+				text-align: center;
+				border-radius: 20px;
+			}
+			.container h1 {
+				font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+				font-size: 27px;
+			}
+			.container p {
+				font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+				font-size: 14px;
+			}
+			.button {
+				text-decoration: none;
+				display: inline-block;
+				color: #ffffff;
+				background-color: #1a0000;
+				border-radius: 15px;
+				width: auto;
+				border: 1px solid #1a0000;
+				font-weight: undefined;
+				padding-top: 5px;
+				padding-bottom: 5px;
+				font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+				font-size: 16px;
+				text-align: center;
+				mso-border-alt: none;
+				word-break: keep-all;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<img
+				alt="Resetting Password"
+				class="fullWidth"
+				src="{MediaURL}/logo.svg"
+				style="display: block; height: auto; border: 0; max-width: 374px; width: 100%"
+				title="Resetting Password"
+				width="374"
+				height="374"
+			/>
+			<h1>Forgot Your Password?</h1>
+			<p>
+				Hello, <strong>{firstName} {lastName}</strong>! <br />
+				It seems you have requested a password reset. If the request wasn't made by you don't hesitate to contact us on this email :
+				<a
+					href="mailto:{contact_email}?subject=UPS-Report&body=We%20would%20like%20you%20to%20know%20that%20some%20one%20is%20trying%20to%20reset%20my%20password%20without%20my%20consent."
+					rel="noopener"
+					style="text-decoration: underline; color: #0068a5"
+					target="_blank"
+					title="{contact_email}"
+				>
+					{contact_email}
+				</a>
+			</p>
+			<p>
+				If you are the one who made the request click on "Reset Password" and it will open a browser page for you.<br />If not
+				please copy this link and open it your self : '{reset_url}'.
+			</p>
+			<a href="{reset_url}" class="button" target="_blank">
+				<span style="padding-left: 20px; padding-right: 20px; font-size: 16px; display: inline-block; letter-spacing: normal">
+					<span style="word-break: break-word; line-height: 32px"> Reset Password </span>
+				</span>
+			</a>
+			<p>
+				Thank you, <br />
+				{{ $company }}
+			</p>
+		</div>
+	</body>
+</html>

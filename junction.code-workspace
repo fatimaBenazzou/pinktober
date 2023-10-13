@@ -1,0 +1,95 @@
+{
+	"folders": [
+		{
+			"path": "back-end",
+			"name": "Back end"
+		},
+		{
+			"path": "front-end",
+			"name": "Front end"
+		},
+		{
+			"path": "admin-end",
+			"name": "Admin end"
+		}
+	],
+	"settings": {
+		"workbench.colorTheme": "Default Dark Modern",
+		"editor.formatOnSave": true,
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": true
+		},
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnPaste": true,
+		"files.autoSave": "onFocusChange",
+		"files.trimTrailingWhitespace": true,
+		"restoreTerminals.runOnStartup": true,
+		"restoreTerminals.keepExistingTerminalsOpen": false,
+		"terminal.integrated.profiles.windows": {
+			"Server": {
+				"source": "PowerShell",
+				"icon": "server",
+				"color": "terminal.ansiGreen"
+			},
+			"Browser": {
+				"source": "PowerShell",
+				"icon": "browser",
+				"color": "terminal.ansiBlue"
+			},
+			"Admin": {
+				"source": "PowerShell",
+				"icon": "browser",
+				"color": "terminal.ansiMagenta"
+			}
+		},
+		"explorer.fileNesting.patterns": {
+			"*.ts": "${capture}.*.ts",
+			"*.router.ts": "${capture}.handler.ts,${capture}.router.ts"
+		},
+		"restoreTerminals.terminals": [
+			{
+				"splitTerminals": [
+					{
+						"profile": "Server",
+						"name": "Back end",
+						"commands": ["cd ../back-end", "npm run dev"],
+						"waitOnExit": true
+					},
+					{
+						"profile": "Browser",
+						"name": "Front end",
+						"commands": ["cd ../front-end", "npm run dev"],
+						"waitOnExit": true
+					}
+					/* ,{
+						"profile": "Admin",
+						"name": "Admin end",
+						"commands": ["cd ./admin-end", "npm run dev"],
+						"waitOnExit": true
+					} */
+				]
+			}
+		],
+		"cSpell.words": ["formik", "heroicons", "mailgun"]
+	},
+	"extensions": {
+		"recommendations": [
+			"dbaeumer.vscode-eslint",
+			"eamodio.gitlens",
+			"esbenp.prettier-vscode",
+			"wayou.vscode-todo-highlight",
+			"fabiospampinato.vscode-todo-plus",
+			"github.copilot",
+			"vscode-icons-team.vscode-icons",
+			"dsznajder.es7-react-js-snippets",
+			"riazxrazor.html-to-jsx",
+			"oderwat.indent-rainbow",
+			"xabikos.javascriptsnippets",
+			"1000ch.svgo",
+			"bradlc.vscode-tailwindcss",
+			"iceworks-team.iceworks-time-master",
+			"planbcoding.vscode-react-refactor",
+			"ethansk.restore-terminals"
+		]
+	}
+}
