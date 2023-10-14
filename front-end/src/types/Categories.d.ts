@@ -14,10 +14,26 @@ interface ActivityI {
     tags: string[];
     image: string;
 }
+interface OpportunityI {
+    id: string;
+    name: string;
+    location: string;
+    tag: string;
+    image: string;
+}
 
 interface HelpI {
     id: string;
     name: string;
     description: string;
     comments: string[];
+}
+
+interface StoryI {
+    id: string;
+    PostType: "Unknown" | "Public";
+    picture?: string;
+    name?: string;
+    title: string;
+    description: string;
 }

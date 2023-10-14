@@ -1,4 +1,3 @@
-import DoctorIcon from "@/icons/DoctorIcon";
 import { InfoCircle } from "iconsax-react";
 import { useState } from "react";
 // import { Link } from "react-router-dom";
@@ -194,9 +193,10 @@ const SelfExam = () => {
         <div className="quiz-container h-screen p-6 bg-white">
             {currentQuestion === null ? (
                 <div className="p-6 w-full h-full flex flex-col items-center justify-center gap-10">
-                    <div className="mask mask-square h-64">
+                    {/* <div className="mask mask-square h-64">
                         <DoctorIcon />
-                    </div>
+                    </div> */}
+                    <img src="/public/logoS.png" alt="" />
                     <div className=" text-center">
                         <h1 className="text-primary text-3xl font-bold mb-6 ">
                             Welcome to Breast Self-Exam
