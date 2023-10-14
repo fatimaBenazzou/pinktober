@@ -8,8 +8,8 @@ import language from "@/app/context/language";
 import modal from "@/app/context/modal";
 import theme from "@/app/context/theme";
 import serverNotification from "@/app/context/serverNotification";
-
-// import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
+import navbar from "@/app/context/navbar";
+import navigation from "@/app/context/navigation";
 
 export const store = configureStore({
 	reducer: {
@@ -20,6 +20,8 @@ export const store = configureStore({
 		[Api.reducerPath]: Api.reducer,
 		user,
 		notifications,
+		navbar,
+		navigation,
 		theme,
 		serverNotification
 	},

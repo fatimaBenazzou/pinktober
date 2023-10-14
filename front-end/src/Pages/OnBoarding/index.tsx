@@ -31,7 +31,7 @@ const OnBoarding = () => {
                     title="AI Doctor and Chatbot"
                     subtitle="Benefit from integrated AI for cancer prediction and chatbot assistance. Access personalized health insights at your fingertips."
                     link={
-                        <Link to={"/login"} className="btn btn-primary btn-circle">
+                        <Link to={"/auth/login"} className="btn btn-primary btn-circle">
                             <ArrowRight className="text-base-100" />
                         </Link>
                     }

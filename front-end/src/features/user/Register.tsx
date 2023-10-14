@@ -83,7 +83,7 @@ function Register() {
 
                             <div className="text-center mt-4">
                                 Already have an account?{" "}
-                                <Link to="/login">
+                                <Link to="/auth/login">
                                     <span className="  inline-block  hover:text-primary hover:underline hover:cursor-pointer transition duration-200">
                                         Login
                                     </span>

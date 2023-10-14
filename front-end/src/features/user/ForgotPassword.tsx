@@ -53,7 +53,7 @@ function ForgotPassword() {
                                     Check your email to reset password
                                 </p>
                                 <div className="text-center mt-4">
-                                    <Link to="/login">
+                                    <Link to="/auth/login">
                                         <button className="btn btn-block btn-primary ">Login</button>
                                     </Link>
                                 </div>
