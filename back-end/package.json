@@ -6,7 +6,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "dev": "concurrently \"tsc --watch\" \"nodemon -q dist/dev.js\""
+    "dev": "npx concurrently \"tsc --watch\" \"nodemon -q dist/dev.js\""
   },
   "keywords": [],
   "author": "",
@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@types/date-fns": "^2.6.0",
+    "axios": "^1.5.1",
     "bcrypt": "^5.1.1",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
