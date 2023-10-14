@@ -12,7 +12,6 @@ const inputs: InputRequiredFields<UserAuthI>[] = [
         required: true,
         type: "text",
         id: "username",
-        // label: "Username",
         placeholder: "username",
         name: "username",
         className: "md:max-w-md",
@@ -24,7 +23,6 @@ const inputs: InputRequiredFields<UserAuthI>[] = [
     {
         required: true,
         name: "password",
-        // label: "Password",
         placeholder: "password",
         type: "password",
         id: "password",
@@ -110,11 +108,8 @@ function Login() {
                                     />
                                 </label>
                                 <div className="label-text ml-8">
-                                    <p className="mb-4 ">
-                                        I’m at least 18 years old and agree to the following terms:
-                                    </p>
                                     <p>
-                                        By checking, I’ve read and agree to the{" "}
+                                        I’ve read and agreed to the{" "}
                                         <span className="text-primary">
                                             Terms and conditions of service.
                                         </span>
@@ -146,17 +141,7 @@ function Login() {
                         </div>
                     </Form>
                 </FormikProvider>
-
-                {/* <Copyright /> */}
             </Page>
-
-            {/* <Logo /> */}
-            {/* <div className="h-full  px-10 flex flex-col gap-8 justify-center pt-28">
-                <h1 className="text-2xl font-bold text-primary">Login to your profile </h1>
-                <p className="text-secondary">
-                    Access to your account so you can manage your money even faster
-                </p>
-            </div> */}
         </div>
     );
 }

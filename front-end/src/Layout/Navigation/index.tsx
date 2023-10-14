@@ -1,9 +1,5 @@
-//import BellIcon from "@heroicons/react/24/outline/BellIcon";
-//import { openRightDrawer } from "@/app/context/rightDrawer";
-//import { RIGHT_DRAWER_TYPES } from "@/utils/globalConstantUtil";
-
 import useNavigation from "@/hooks/useNavigation";
-import { Card, Home2, Messages, User, Verify } from "iconsax-react";
+import { Home2, Messages, User, Verify } from "iconsax-react";
 import { Link } from "react-router-dom";
 const navs = [
     {
@@ -18,7 +14,7 @@ const navs = [
     },
     {
         name: "Ai Doctor",
-        icon: <Card className="w-5 h-5" />,
+        icon: <img src="/public/Vector.png" />,
         path: "/app/ai-doctor",
     },
     {
@@ -29,7 +25,7 @@ const navs = [
     {
         name: "Profile",
         icon: <User className="w-5 h-5" />,
-        path: "/app/settings",
+        path: "/app/profile",
     },
 ];
 function Navigation() {
@@ -37,16 +33,22 @@ function Navigation() {
     if (!isOpen) return null;
     return (
         // <div className="bg-gray-200">
-            <div className="btm-nav -bottom-2">
-			{navs.map((elm, i) => (
-                   <Link key={"nav" + i} to={elm.path}>
-				   {elm.icon}
-					  
-					   <span className="btm-nav-label text-sm">{elm.name}</span>
-				   </Link>
-                ))}
-                
-            </div>
+        <div className="btm-nav -bottom-2">
+            {navs.map((elm, i) => (
+                <Link key={"nav" + i} to={elm.path}>
+                    <span className={` ${location.pathname === elm.path ? "text-primary" : ""}`}>
+                        {elm.icon}
+                    </span>
+                    <span
+                        className={`btm-nav-label text-sm ${
+                            location.pathname === elm.path ? "text-primary" : ""
+                        }`}
+                    >
+                        {elm.name}
+                    </span>
+                </Link>
+            ))}
+        </div>
         // </div>
     );
 }

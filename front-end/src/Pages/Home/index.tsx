@@ -132,7 +132,7 @@ const Categories: CategoryI[] = [
     {
         name: "Activities",
         icon: "🎨",
-        content: <Activities title="Activities & Events" data={Activitiess} />,
+        content: <Activities title="Activities & Events" data={Activitiess}  />,
     },
     {
         name: "Helping Hands",

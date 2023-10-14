@@ -34,4 +34,13 @@ export default {
             },
         ],
     },
+    theme: {
+		extend: {
+			colors: {
+				custom0: "#3f5ff0",
+				custom1: "#06fbb8",
+				custom2: "#ff5139",
+			},
+		},
+	},
 };

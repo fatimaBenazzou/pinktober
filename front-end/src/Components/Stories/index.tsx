@@ -8,11 +8,14 @@ type Props = {
 const Stories = ({ title, data }: Props) => {
     return (
         <div className="w-full h-full flex flex-col ">
-            <h3 className="font-bold mb-2 text-2xl">{title}</h3>
-            {data.map((story) => (
+            <div className="flex justify-between items-center mb-6">
+                <h3 className="text-2xl font-bold">{title} </h3>
+                <Link className="text-primary underline text-sm" to={""}>Post Your Story</Link>
+            </div>
+            {data.map((story, i) => (
                 <div key={story.id} className="card bg-base-100 shadow-xl mb-8">
                     <span
-                        className="absolute inset-y-0 left-0 w-2.5 rounded-r-none rounded-l-xl bg-primary "
+                        className={`absolute inset-y-0 left-0 w-2.5 rounded-r-none rounded-l-xl bg-custom${i}`}
                         aria-hidden="true"
                     ></span>
 
@@ -22,7 +25,7 @@ const Stories = ({ title, data }: Props) => {
                                 <div className="flex items-center gap-2">
                                     <div className="avatar">
                                         <div className="w-8 rounded-full">
-                                            <img src="https://reqres.in/img/faces/1-image.jpg" />
+                                            <img src="/public/unknown.png" />
                                         </div>
                                     </div>
                                     <p>Unknown</p>

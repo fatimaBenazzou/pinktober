@@ -1,4 +1,5 @@
 import { Messages2 } from "iconsax-react";
+import { Link } from "react-router-dom";
 
 type Props = {
     title: string;
@@ -8,7 +9,10 @@ type Props = {
 const Helping = ({ title, data }: Props) => {
     return (
         <div className="w-full h-full flex flex-col ">
-            <h3 className="font-bold mb-2 text-2xl">{title}</h3>
+            <div className="flex justify-between items-center mb-6">
+                <h3 className="text-2xl font-bold">{title} </h3>
+                <Link className="text-primary underline text-sm" to={""}>Post Question</Link>
+            </div>
             {data.map((help) => (
                 <div key={help.id} className="card bg-base-100 shadow-xl mb-8">
                   <span className="absolute inset-y-0 left-0 w-2.5 rounded-r-none rounded-l-xl bg-primary " aria-hidden="true"></span>

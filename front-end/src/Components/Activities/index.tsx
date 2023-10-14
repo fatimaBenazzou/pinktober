@@ -8,9 +8,9 @@ type Props = {
 const Activities = ({ title, data }: Props) => {
     return (
         <div className="w-full h-full flex flex-col">
-            <h3 className="font-bold mb-2 text-2xl">{title}</h3>
+            <h3 className="text-2xl font-bold mb-6">{title} </h3>
             {data.map((activity) => (
-                <div key={activity.id} className="card bg-base-100 shadow-xl mb-8">
+                <div key={activity.id} className="card bg-base-100 shadow-xl mb-8 ">
                     <figure>
                         <img src={activity.image} alt="marathon" />
                     </figure>
@@ -20,7 +20,7 @@ const Activities = ({ title, data }: Props) => {
                                 {activity.day} at {activity.time}
                             </p>
                             <div className="flex text-secondary gap-1">
-                                <People className="w-5 h-5"/>
+                                <People className="w-5 h-5" />
                                 <p>
                                     {activity.joined}/{activity.max}
                                 </p>
