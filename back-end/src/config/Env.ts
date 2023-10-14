@@ -81,9 +81,9 @@ export const MAIN_URL = CheckEnv("MAIN_URL", FRONT_URL);
 
 /**
  * @description The name of the project maker or organization.
- * @default "Jesuph Jobs"
+ * @default "BATATArose"
  */
-export const ProjectMaker = CheckEnv("PROJECT_Maker", "Jesuph Jobs");
+export const ProjectMaker = CheckEnv('PROJECT_Maker', 'BATATArose');
 
 /**
  * @description The name of the project.

@@ -1,16 +1,24 @@
 import { Request, Response } from 'express';
 import mystoryModel, { MystoryI } from './Mystory';
 import { ErrorResponse, SuccessResponse } from '../utils/Response';
-
+import { HttpCodes } from '../config/Errors';
 // Get all questions
 export const GetStories = async (req: Request, res: Response) => {
   try {
     const stories = await mystoryModel.find();
-    // res.status(200).json(stories);
-    return SuccessResponse(res, 200, stories, 'get stories successfully.');
+    return SuccessResponse(
+      res,
+      HttpCodes.OK.code,
+      stories,
+      'get stories successfully.'
+    );
   } catch (error) {
-    // res.status(500).json({ error: 'Server error' });
-    return ErrorResponse(res, 500, 'Failed to get stories.', error);
+    return ErrorResponse(
+      res,
+      HttpCodes.InternalServerError.code,
+      'Failed to get stories.',
+      error
+    );
   }
 };
 
@@ -24,57 +32,78 @@ export const CreateStory = async (req: Request, res: Response) => {
       story,
     });
     const savedStory = await newStory.save();
-    return SuccessResponse(res, 201, savedStory, 'Created story successfully.');
+    return SuccessResponse(
+      res,
+      HttpCodes.Created.code,
+      savedStory,
+      'Created story successfully.'
+    );
   } catch (error) {
-    return ErrorResponse(res, 500, 'Failed to create story.', error);
+    return ErrorResponse(
+      res,
+      HttpCodes.InternalServerError.code,
+      'Failed to create story.',
+      error
+    );
   }
 };
 
 // Delete a question by its ID
 export const DeleteStory = async (req: Request, res: Response) => {
-  const {storyId} = req.body; 
+  const { storyId } = req.body;
 
   try {
     const deletedStory = await mystoryModel.findByIdAndRemove(storyId);
     if (deletedStory) {
-      //   res.status(200).json({ message: 'story deleted successfully' });
       return SuccessResponse(
         res,
-        200,
+        HttpCodes.OK.code,
         deletedStory,
         'Deleted story successfully.'
       );
     } else {
-      //   res.status(404).json({ error: 'story not found' });
-      return ErrorResponse(res, 404, 'Failed to delete story.');
+      return ErrorResponse(
+        res,
+        HttpCodes.NotFound.code,
+        'Failed to delete story.'
+      );
     }
   } catch (error) {
-    // res.status(500).json({ error: 'Server error' });
-    return ErrorResponse(res, 500, 'Failed to delete story.', error);
+    return ErrorResponse(
+      res,
+      HttpCodes.InternalServerError.code,
+      'Failed to delete story.',
+      error
+    );
   }
 };
 
-
+//Update story
 export const UpdateStory = async (req: Request, res: Response) => {
-  const { storyId, newStory } =  req.body; 
+  const { storyId, newStory } = req.body;
   try {
     const updatedStory = await mystoryModel.findByIdAndUpdate(
       storyId,
-      { story:  newStory  },
+      { story: newStory },
       { new: true }
     );
 
     if (updatedStory) {
       return SuccessResponse(
         res,
-        200,
+        HttpCodes.OK.code,
         updatedStory,
         'Story updated (patched) successfully.'
       );
     } else {
-      return ErrorResponse(res, 404, 'Story not found.');
+      return ErrorResponse(res, HttpCodes.NotFound.code, 'Story not found.');
     }
   } catch (error) {
-    return ErrorResponse(res, 500, 'Failed to update (patch) story.', error);
+    return ErrorResponse(
+      res,
+      HttpCodes.InternalServerError.code,
+      'Failed to update (patch) story.',
+      error
+    );
   }
 };

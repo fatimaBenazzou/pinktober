@@ -2,16 +2,25 @@ import { Request, Response } from 'express';
 import questionModel, { QuestionI } from './Question';
 import { ErrorResponse, SuccessResponse } from '../utils/Response';
 import { ObjectId } from 'mongodb';
+import { HttpCodes } from '../config/Errors';
 
 // Get all questions
 export const GetQuests = async (req: Request, res: Response) => {
   try {
     const questions = await questionModel.find();
-    // res.status(200).json(questions);
-    return SuccessResponse(res, 200, questions, 'get questions successfully.');
+    return SuccessResponse(
+      res,
+      HttpCodes.OK.code,
+      questions,
+      'get questions successfully.'
+    );
   } catch (error) {
-    // res.status(500).json({ error: 'Server error' });
-    return ErrorResponse(res, 500, 'Failed to get questions.', error);
+    return ErrorResponse(
+      res,
+      HttpCodes.InternalServerError.code,
+      'Failed to get questions.',
+      error
+    );
   }
 };
 
@@ -27,39 +36,50 @@ export const CreateQuest = async (req: Request, res: Response) => {
     const savedQuestion = await newQuestion.save();
     return SuccessResponse(
       res,
-      201,
+      HttpCodes.Created.code,
       savedQuestion,
       'Created question successfully.'
     );
   } catch (error) {
-    return ErrorResponse(res, 500, 'Failed to create question.', error);
+    return ErrorResponse(
+      res,
+      HttpCodes.InternalServerError.code,
+      'Failed to create question.',
+      error
+    );
   }
 };
 
 // Delete a question by its ID
 export const DeleteQuest = async (req: Request, res: Response) => {
-  const {questionId} = req.body; // Assuming you pass the question ID in the request parameters
-
+  const { questionId } = req.body;
   try {
     const deletedQuestion = await questionModel.findByIdAndRemove(questionId);
     if (deletedQuestion) {
-      //   res.status(200).json({ message: 'Question deleted successfully' });
       return SuccessResponse(
         res,
-        200,
+        HttpCodes.OK.code,
         deletedQuestion,
         'Deleted question successfully.'
       );
     } else {
-      //   res.status(404).json({ error: 'Question not found' });
-      return ErrorResponse(res, 404, 'Failed to delete question.');
+      return ErrorResponse(
+        res,
+        HttpCodes.NotFound.code,
+        'Failed to delete question.'
+      );
     }
   } catch (error) {
-    // res.status(500).json({ error: 'Server error' });
-    return ErrorResponse(res, 500, 'Failed to delete question.', error);
+    return ErrorResponse(
+      res,
+      HttpCodes.InternalServerError.code,
+      'Failed to delete question.',
+      error
+    );
   }
 };
 
+// Create a new answer
 export const CreateAnswer = async (req: Request, res: Response) => {
   const { userId, questionId, answer } = req.body;
 
@@ -67,12 +87,12 @@ export const CreateAnswer = async (req: Request, res: Response) => {
     const existingQuestion = await questionModel.findById(questionId);
 
     if (!existingQuestion) {
-      return ErrorResponse(res, 404, 'Question not found.');
+      return ErrorResponse(res, HttpCodes.NotFound.code, 'Question not found.');
     }
 
     const newAnswer = {
-      userId : userId,
-      answer : answer,
+      userId: userId,
+      answer: answer,
     };
 
     existingQuestion.answers.push(newAnswer);
@@ -81,11 +101,16 @@ export const CreateAnswer = async (req: Request, res: Response) => {
 
     return SuccessResponse(
       res,
-      201,
+      HttpCodes.Created.code,
       updatedQuestion,
       'Answer added successfully.'
     );
   } catch (error) {
-    return ErrorResponse(res, 500, 'Failed to add answer.', error);
+    return ErrorResponse(
+      res,
+      HttpCodes.InternalServerError.code,
+      'Failed to add answer.',
+      error
+    );
   }
 };
