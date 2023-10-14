@@ -18,9 +18,9 @@ export const CreateReset = async (req: MyRequest, res: Response) => {
 		const reset = await resetModel.create({ email: user.email, user: user._id });
 		SendEmail({
 			to: user.email,
-			subject: `${PROJECT_Name} Reset email`,
+			subject: `${PROJECT_Name} Reset Password`,
 			html: formatString(ResetEmail || "{reset_url}", {
-				reset_url: `${FRONT_URL}/reset/${reset._id}`,
+				reset_url: `${FRONT_URL}/auth/reset/${reset._id}`,
 				firstName: user.firstName,
 				lastName: user.lastName,
 				PROJECT_Name,
@@ -36,7 +36,7 @@ export const CreateReset = async (req: MyRequest, res: Response) => {
 			});
 		const msg = formatString(authLogs.RESET_SUCCESS.message, { email });
 		authLogger.info(msg, { type: authLogs.RESET_SUCCESS.type });
-		SuccessResponse(res, HttpCodes.OK.code, null, msg);
+		SuccessResponse(res, HttpCodes.OK.code, `reset id : ${reset._id}`, msg);
 	} catch (err) {
 		const msg = formatString(authLogs.RESET_ERROR_GENERIC.message, { error: (err as Error)?.message || "", email });
 		authLogger.error(msg, err as Error);
