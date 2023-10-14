@@ -41,7 +41,7 @@ export const PORT = CheckEnv("BACK_PORT", "3400");
  * @description The default port number if the 'BACK_PORT' environment variable is not set.
  * @default "3400"
  */
-export const DOMAIN = CheckEnv("DOMAIN", "jesuph.me");
+export const DOMAIN = CheckEnv("DOMAIN", "sakora");
 
 /**
  * @description The URL of the backend. If 'BACK_URL' is not set, it defaults to 'http://localhost:PORT' in development mode and 'https://jesuph.me' in production mode.
@@ -80,17 +80,6 @@ export const MediaURL = `${BACK_URL}${MediaRoute}`;
 export const MAIN_URL = CheckEnv("MAIN_URL", FRONT_URL);
 
 /**
- * @description The URL for redirecting to the UPS integration page.
- * @default `${ADMIN_URL}/app/integration/ups`
- */
-export const UpsIntegrationRedirectUrl = CheckEnv("Ups_Integration_Redirect_Url", `${ADMIN_URL}/app/integration/ups`);
-/**
- * @description The URL for redirecting to the UPS integration page.
- * @default InDev ? "https://wwwcie.ups.com" : "https://onlinetools.ups.com"
- */
-export const UPSApiURL = CheckEnv("UpsApiURL", InDev ? "https://wwwcie.ups.com" : "https://onlinetools.ups.com");
-export const shipmentUPSversion = "v1801";
-/**
  * @description The name of the project maker or organization.
  * @default "Jesuph Jobs"
  */
@@ -102,11 +91,6 @@ export const ProjectMaker = CheckEnv("PROJECT_Maker", "Jesuph Jobs");
  */
 export const PROJECT_Name = CheckEnv("PROJECT_Name", "Project Name");
 
-/**
- * @description The website URL of the project maker or organization.
- * @default "https://jesuph-jobs.com"
- */
-export const MakersWebsite = CheckEnv("PROJECT_Maker_Website", "https://jesuph-jobs.com");
 
 /**
  * @description The developer's email address.
@@ -114,6 +98,16 @@ export const MakersWebsite = CheckEnv("PROJECT_Maker_Website", "https://jesuph-j
  */
 export const DEV_Email = CheckEnv("DEV_Email", "madadiyoucef@outlook.com");
 
+
+
+/**
+ * @description The developer's email address.
+ * @default "sofianekdm003@gmail.com"
+ */
+export const DEV_EDITOR_Email = CheckEnv(
+  'DEV_EDITOR_Email',
+  'sofianekdm003@gmail.com'
+);
 /**
  * @description The port used for email communication.
  * @default "587"
@@ -129,7 +123,7 @@ export const EmailHost = CheckEnv("BACK_EmailHost", "smtp.mailgun.org");
  * @description The contact email for response.
  * @default "smtp.mailgun.org"
  */
-export const EmailContact = CheckEnv("BACK_EmailContact", "madadiyoucef@outlook.com");
+export const EmailContact = CheckEnv("BACK_EmailContact", "sofianekdm003@gmail.com");
 
 /**
  * @description The root directory where log files are stored.

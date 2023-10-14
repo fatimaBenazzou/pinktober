@@ -7,6 +7,7 @@ import { checkLogs, isLoggedIn } from '../models/Users.middleware.js';
 import predmodelRouter from './predmodel.router.js';
 import helpRouter from './help.router.js';
 import mystoryRouter from './mystory.router.js';
+import chatbotRouter from './chatbot.router.js';
 
 export default function SetRouters(app: Application) {
   app.use('/', indexRouter);
@@ -14,14 +15,13 @@ export default function SetRouters(app: Application) {
 
   app.use('/profile', checkLogs, isLoggedIn, profileRouter);
 
-  // app.use('/predmodel', predmodelRouter); //for testing
   app.use('/predmodel', checkLogs, isLoggedIn, predmodelRouter);
 
-//   app.use('/help', helpRouter);
   app.use('/help', checkLogs, isLoggedIn, helpRouter);
 
-//   app.use('/mystory', mystoryRouter);
   app.use('/mystory', checkLogs, isLoggedIn, mystoryRouter);
+
+  app.use('/chatbot', checkLogs, isLoggedIn, chatbotRouter);
 
   // clients or deliveryman
   app.use('/notification', checkLogs, isLoggedIn, notificationRouter);

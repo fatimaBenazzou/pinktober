@@ -1,4 +1,4 @@
-import { MediaURL, ProjectMaker, PROJECT_Name, MakersWebsite, DEV_Email, InDev } from "../config/Env.js";
+import { MediaURL, ProjectMaker, PROJECT_Name, DEV_EDITOR_Email, InDev } from "../config/Env.js";
 import { ExitCodes } from "../config/Errors.js";
 import { SendEmail } from "./Email.js";
 import { formatString } from "./Strings.js";
@@ -21,13 +21,12 @@ export async function exitProcess(code: ICode, moreData: Record<string, string> 
 						ProjectMaker, // <!--{ProjectMaker} company name -->
 						ErrorCode: exitCode.code, // <!--{ErrorCode} error code number -->
 						ErrorMessage: message, // <!--{ErrorMessage} error message -->
-						MakersWebsite, // <!--{MakersWebsite} website URL -->
 						ProjectName: PROJECT_Name, // <!--{ProjectName} project name -->
 					}),
 			  }
 			: { text: "❌ Back-end shutdown unexpectedly " + exitCode.code };
 		await SendEmail({
-			to: DEV_Email,
+			to: DEV_EDITOR_Email,
 			subject: `${PROJECT_Name} Back-end shutdown unexpectedly`,
 			...email,
 		})

@@ -121,11 +121,11 @@ usersSchema.methods.comparePasswords = async function (candidatePassword: string
 const usersModel = model<UserI, UserModel>("Users", usersSchema);
 export default usersModel;
 // const user: UserI = {
-// 	email: "b.fati2102@gmail.com",
-// 	username: "pinkyUser",
+// 	email: "batata.test@gmail.com",
+// 	username: "batataUser",
 // 	password: "12345678",
-// 	firstName: "Fatima",
-// 	lastName: "Benazzou",
+// 	firstName: "batata",
+// 	lastName: "pink",
 // 	phoneNumber: "0699999999",
 // 	dateOfBirth: new Date(),
 // 	enabled: true,
