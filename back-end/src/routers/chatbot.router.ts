@@ -1,8 +1,8 @@
 import { Router } from 'express';
 import { Chat } from '../models/chat.controller';
 
-const chatbotRouter = Router();
+const chatRouter = Router();
 
-chatbotRouter.route('/').post(Chat);
+chatRouter.route('/').post(Chat);
 
-export default chatbotRouter;
+export default chatRouter;

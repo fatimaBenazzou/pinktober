@@ -24,7 +24,7 @@ function ProfileSettings() {
 			<TitleCard title="Profile Settings" topMargin="mt-2">
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 					<InputText labelTitle="Name" defaultValue="Alex" updateFormValue={updateFormValue} />
-					<InputText labelTitle="Email Id" defaultValue="alex@ups-manager.com" updateFormValue={updateFormValue} />
+					<InputText labelTitle="Email Id" defaultValue="alex@Sakura-manager.com" updateFormValue={updateFormValue} />
 					<InputText labelTitle="Title" defaultValue="UI/UX Designer" updateFormValue={updateFormValue} />
 					<InputText labelTitle="Place" defaultValue="California" updateFormValue={updateFormValue} />
 					<TextAreaInput

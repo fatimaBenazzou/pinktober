@@ -13,8 +13,8 @@ function LeftSidebar() {
 			<ul className="menu pt-20 md:pt-2 h-[100vh] overflow-auto flex-nowrap w-80 bg-base-100 text-base-content gap-1">
 				<li className="mb-2 font-semibold text-xl">
 					<Link to={"/app/welcome"}>
-						<img className="w-10" src="/favicon.svg" alt="UPS - Manager Logo" />
-						UPS - Manager
+						<img className="w-10" src="/favicon.svg" alt="Sakura - Manager Logo" />
+						Sakura - Manager
 					</Link>
 				</li>
 				{routes.map((route, k) => {

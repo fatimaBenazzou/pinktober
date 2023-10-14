@@ -20,10 +20,10 @@ export type IAuthLogs =
 	| "AUTH_BACK"
 	| "LOGOUT_SUCCESS"
 	| "CLIENT_NOT_FOUND"
-	| "UPS_INTEGRATION_NOT_FOUND"
-	| "UPS_INTEGRATION_TOKEN_STILL_VALID"
-	| "UPS_INTEGRATION_TOKEN_REFRESHED"
-	| "UPS_INTEGRATION_TOKEN_REFRESH_FAILED"
+	| "Sakura_INTEGRATION_NOT_FOUND"
+	| "Sakura_INTEGRATION_TOKEN_STILL_VALID"
+	| "Sakura_INTEGRATION_TOKEN_REFRESHED"
+	| "Sakura_INTEGRATION_TOKEN_REFRESH_FAILED"
 	| "RESET_SUCCESS"
 	| "RESET_PASSWORD_SUCCESS"
 	| "RESET_ERROR_GENERIC"
@@ -130,25 +130,25 @@ export const authLogs: IErrors<IAuthLogs> = {
 		message: "Client {clientId} not found",
 		type: "CLIENT_NOT_FOUND",
 	},
-	UPS_INTEGRATION_NOT_FOUND: {
+	Sakura_INTEGRATION_NOT_FOUND: {
 		code: 19,
-		message: "Ups Integration not found for {clientId}",
-		type: "UPS_INTEGRATION_NOT_FOUND",
+		message: "Sakura Integration not found for {clientId}",
+		type: "Sakura_INTEGRATION_NOT_FOUND",
 	},
-	UPS_INTEGRATION_TOKEN_STILL_VALID: {
+	Sakura_INTEGRATION_TOKEN_STILL_VALID: {
 		code: 20,
-		message: "Ups Integration token is still valid for {clientId}",
-		type: "UPS_INTEGRATION_TOKEN_STILL_VALID",
+		message: "Sakura Integration token is still valid for {clientId}",
+		type: "Sakura_INTEGRATION_TOKEN_STILL_VALID",
 	},
-	UPS_INTEGRATION_TOKEN_REFRESHED: {
+	Sakura_INTEGRATION_TOKEN_REFRESHED: {
 		code: 21,
-		message: "Ups Integration token has been refreshed for {clientId}",
-		type: "UPS_INTEGRATION_TOKEN_REFRESHED",
+		message: "Sakura Integration token has been refreshed for {clientId}",
+		type: "Sakura_INTEGRATION_TOKEN_REFRESHED",
 	},
-	UPS_INTEGRATION_TOKEN_REFRESH_FAILED: {
+	Sakura_INTEGRATION_TOKEN_REFRESH_FAILED: {
 		code: 22,
-		message: "Ups Integration token has failed to refresh for {clientId}",
-		type: "UPS_INTEGRATION_TOKEN_REFRESH_FAILED",
+		message: "Sakura Integration token has failed to refresh for {clientId}",
+		type: "Sakura_INTEGRATION_TOKEN_REFRESH_FAILED",
 	},
 	RESET_SUCCESS: {
 		code: 23,

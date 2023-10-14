@@ -28,8 +28,8 @@ const OnBoarding = () => {
             ) : (
                 <OnBoardingPage
                     image={<DoctorIcon />}
-                    title="AI Doctor and Chatbot"
-                    subtitle="Benefit from integrated AI for cancer prediction and chatbot assistance. Access personalized health insights at your fingertips."
+                    title="AI Doctor and chat"
+                    subtitle="Benefit from integrated AI for cancer prediction and chat assistance. Access personalized health insights at your fingertips."
                     link={
                         <Link to={"/auth/login"} className="btn btn-primary btn-circle">
                             <ArrowRight className="text-base-100" />

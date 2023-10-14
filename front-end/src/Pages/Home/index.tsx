@@ -46,7 +46,7 @@ const Activitiess: ActivityI[] = [
         max: 32,
         joined: 8,
         tags: ["Activity", "Fitness"],
-        image: "public/activity.png",
+        image: "/public/activity.png",
     },
     {
         id: "2",
@@ -56,7 +56,7 @@ const Activitiess: ActivityI[] = [
         max: 32,
         joined: 8,
         tags: ["Activity", "Fitness"],
-        image: "public/activity.png",
+        image: "/public/activity.png",
     },
     {
         id: "3",
@@ -66,7 +66,7 @@ const Activitiess: ActivityI[] = [
         max: 32,
         joined: 8,
         tags: ["Activity", "Fitness"],
-        image: "public/activity.png",
+        image: "/public/activity.png",
     },
     {
         id: "4",
@@ -76,7 +76,7 @@ const Activitiess: ActivityI[] = [
         max: 32,
         joined: 8,
         tags: ["Activity", "Fitness"],
-        image: "public/activity.png",
+        image: "/public/activity.png",
     },
 ];
 

@@ -25,7 +25,7 @@ const TEAM_MEMBERS = [
 	{
 		name: "Alex",
 		avatar: "https://reqres.in/img/faces/1-image.jpg",
-		email: "alex@ups-manager.com",
+		email: "alex@Sakura-manager.com",
 		role: "Owner",
 		joinedOn: moment(new Date())
 			.add(-5 * 1, "days")
@@ -35,7 +35,7 @@ const TEAM_MEMBERS = [
 	{
 		name: "Ereena",
 		avatar: "https://reqres.in/img/faces/2-image.jpg",
-		email: "ereena@ups-manager.com",
+		email: "ereena@Sakura-manager.com",
 		role: "Admin",
 		joinedOn: moment(new Date())
 			.add(-5 * 2, "days")
@@ -45,7 +45,7 @@ const TEAM_MEMBERS = [
 	{
 		name: "John",
 		avatar: "https://reqres.in/img/faces/3-image.jpg",
-		email: "jhon@ups-manager.com",
+		email: "jhon@Sakura-manager.com",
 		role: "Admin",
 		joinedOn: moment(new Date())
 			.add(-5 * 3, "days")
@@ -55,7 +55,7 @@ const TEAM_MEMBERS = [
 	{
 		name: "Matrix",
 		avatar: "https://reqres.in/img/faces/4-image.jpg",
-		email: "matrix@ups-manager.com",
+		email: "matrix@Sakura-manager.com",
 		role: "Manager",
 		joinedOn: moment(new Date())
 			.add(-5 * 4, "days")
@@ -65,7 +65,7 @@ const TEAM_MEMBERS = [
 	{
 		name: "Virat",
 		avatar: "https://reqres.in/img/faces/5-image.jpg",
-		email: "virat@ups-manager.com",
+		email: "virat@Sakura-manager.com",
 		role: "Support",
 		joinedOn: moment(new Date())
 			.add(-5 * 5, "days")
@@ -75,7 +75,7 @@ const TEAM_MEMBERS = [
 	{
 		name: "Miya",
 		avatar: "https://reqres.in/img/faces/6-image.jpg",
-		email: "miya@ups-manager.com",
+		email: "miya@Sakura-manager.com",
 		role: "Support",
 		joinedOn: moment(new Date())
 			.add(-5 * 7, "days")

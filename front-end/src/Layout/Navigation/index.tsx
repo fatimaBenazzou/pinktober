@@ -9,7 +9,7 @@ const navs = [
     {
         name: "Home",
         icon: <Home2 className="w-5 h-5" />,
-        path: "/app/home",
+        path: "/app/",
     },
     {
         name: "Self-Exam",
