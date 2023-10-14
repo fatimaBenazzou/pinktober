@@ -74,8 +74,10 @@ export const GetUser = async (req: MyRequest, res: Response, next: NextFunction)
 };
 export const updateProfile = async (req: MyRequest, res: Response) => {
 	const user = req.user as UserD;
-	const { firstName, lastName, email, phoneNumber } = req.body;
+	
+	const { username , firstName, lastName, email, phoneNumber } = req.body;
 	try {
+		if (username) user.username = username;
 		if (firstName) user.firstName = firstName;
 		if (lastName) user.lastName = lastName;
 		if (email) user.email = email;
