@@ -1,7 +1,7 @@
 import { useAskChatMutation, useGetAllMessagesQuery } from "@/app/backend/export/chat";
 import useNavbar from "@/hooks/useNavbar";
 import usePageTitle from "@/hooks/usePageTitle";
-import {ArrowLeft2, ArrowRight2} from "iconsax-react";
+import { ArrowLeft2, ArrowRight2 } from "iconsax-react";
 import { useEffect, useState } from "react";
 import Error500 from "../Errors/Error500";
 import Fallback from "@/Components/Fallback";
@@ -17,7 +17,12 @@ function Question({ message }: { message: string }) {
 }
 function Answer({ message }: { message: string }) {
     return (
-        <div className="chat chat-start">
+        <div className="chat chat-start ">
+            <div className="chat-image avatar ">
+                <div className="w-10 p-2 rounded-full bg-base-200">
+                    <img src="/public/chopper.png" />
+                </div>
+            </div>
             <div className="chat-bubble bg-base-100 text-neutral">{message}</div>
         </div>
     );
@@ -41,32 +46,31 @@ export default function Chat() {
         };
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
-	const navigate = useNavigate()
+    const navigate = useNavigate();
 
     if (isFetching) return <Fallback />;
     if (!responses) return <Error500 />;
     const { data: messages } = responses;
 
     return (
-        <div className="flex flex-col relative h-screen justify-end w-full px-6 bg-base-200 ">
-			<div className="absolute top-0 left-0 w-full px-6 py-3 gap-4 bg-base-100 z-50">
-			<button
+        <div className="flex flex-col relative h-screen justify-end w-full px-6 bg-[url('/public/bg.png')] bg-cover">
+            <div className="absolute top-0 left-0 w-full px-6 py-3 gap-4 bg-base-100 z-50">
+                <button
                     className="btn btn-ghost btn-circle active:bg-base-200 absolute z-50"
                     disabled={isAsking}
                     onClick={() => {
-						navigate(-1)
-					}}
+                        navigate(-1);
+                    }}
                 >
                     <ArrowLeft2 />
                 </button>
                 <div className="w-full flex flex-col relative  text-black place-items-center ">
-                   <h2 className="font-bold text-primary text-lg ">PinkPanthere</h2>
-                   <div className="flex items-center gap-2">
-					<div className="rounded-full bg-green-600 w-2 h-2"></div>
-					<p className="text-xs">Always active</p>
-				   </div>
+                    <h2 className="font-bold text-primary text-lg ">Chopper 🍭</h2>
+                    <div className="flex items-center gap-1">
+                        <div className="rounded-full bg-green-600 w-2 h-2"></div>
+                        <p className="text-xs">Always active</p>
+                    </div>
                 </div>
-                
             </div>
             <div className="flex flex-col gap-4 py-24 overflow-y-auto no-scrollbar">
                 {messages.map((message) =>
@@ -88,7 +92,6 @@ export default function Chat() {
                         disabled={isAsking}
                         value={message}
                     />
-                    {/* <Microphone2 className="absolute right-4 top-1/2 transform -translate-y-1/2" /> */}
                 </div>
                 <button
                     className="btn btn-primary btn-circle text-base-100"

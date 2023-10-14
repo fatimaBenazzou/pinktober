@@ -3,6 +3,8 @@ import { Navigate, useRoutes } from "react-router-dom";
 import { useUser } from "@/hooks";
 import Home from "@/Pages/Home";
 import Chat from "@/Pages/Chat";
+import SelfExam from "@/Pages/SelfExam";
+import AiDoctor from "@/Pages/AiDoctor";
 // import Auth from "@/Pages/Auth";
 
 const Error404 = lazy(() => import("@/Pages/Errors/Error404"));
@@ -33,6 +35,8 @@ const Router = () => {
             element: user && user._id ? <Layout /> : <Navigate to="/auth/login" />,
             children: [
                 { path: "", element: <Home /> },
+                { path: "self-exam", element: <SelfExam /> },
+                { path: "ai-doctor", element: <AiDoctor /> },
                 {
                     path: "dashboard", // the url
                     element: <Dashboard />,

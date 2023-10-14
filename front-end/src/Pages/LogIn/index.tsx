@@ -4,7 +4,6 @@ import { useLogOutMutation, useSignInMutation } from "@/app/backend/export/auth"
 import * as Yup from "yup";
 import { useFormik, Form, FormikProvider } from "formik";
 import { Input } from "../../Components/Input";
-import Logo from "@/Components/Logo";
 import { Profile } from "iconsax-react";
 import Page from "@/Components/Page";
 
@@ -150,13 +149,14 @@ function Login() {
 
                 {/* <Copyright /> */}
             </Page>
-            <Logo />
-            <div className="h-full  px-10 flex flex-col gap-8 justify-center pt-28">
+
+            {/* <Logo /> */}
+            {/* <div className="h-full  px-10 flex flex-col gap-8 justify-center pt-28">
                 <h1 className="text-2xl font-bold text-primary">Login to your profile </h1>
                 <p className="text-secondary">
                     Access to your account so you can manage your money even faster
                 </p>
-            </div>
+            </div> */}
         </div>
     );
 }

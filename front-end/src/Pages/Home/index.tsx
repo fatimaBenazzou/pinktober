@@ -101,16 +101,8 @@ const Categories: CategoryI[] = [
 ];
 
 export default function Home() {
-    const [currentcategory, setCurrentCategory] = useState(1);
-    // const { setIsOpen } = useNavbar();
-	// const { setIsOpen: setIsNavigation } = useNavigation();
-	// useEffect(() => {
-	// 	setIsOpen(false);
-	// 	setIsNavigation(false);
-	// }, []);
-
-
-
+    const [currentcategory, setCurrentCategory] = useState(0);
+    
     return (
         <div className="w-full flex flex-col pt-8 p-6 relative">
             <div className="absolute -top-44 -left-4 bg-base-200 rounded-full w-[110%] h-[28rem]"></div>
