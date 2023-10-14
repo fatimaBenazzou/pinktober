@@ -12,7 +12,7 @@ const Stories = ({ title, data }: Props) => {
                 <h3 className="text-2xl font-bold">{title} </h3>
                 <Link className="text-primary underline text-sm" to={""}>Post Your Story</Link>
             </div>
-            {data.map((story, i) => (
+            {data.map((story) => (
                 <div key={story.id} className="card bg-base-100 shadow-xl mb-8">
                     <span
                         className={`absolute inset-y-0 left-0 w-2.5 rounded-r-none rounded-l-xl bg-primary`}
