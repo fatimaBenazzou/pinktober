@@ -9,7 +9,7 @@ function ModalLayout() {
 	const model = useModal();
 	const { modalData, closeModal } = model;
 	const { isOpen, bodyType, size, /* extraObject, */ title } = modalData;
-	console.log({ isOpen });
+	if (!isOpen) return null;
 	return (
 		<dialog
 			className={`modal ${isOpen ? "modal-open" : ""}`}

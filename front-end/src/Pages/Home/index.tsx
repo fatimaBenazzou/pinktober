@@ -3,9 +3,8 @@ import Banner from "@/Components/Banner";
 import Helping from "@/Components/Helping";
 import Opportunities from "@/Components/Opportunities";
 import Header from "@/Layout/Header";
-// import useNavbar from "@/hooks/useNavbar";
 import { Profile } from "iconsax-react";
-import { useState } from "react";
+import {  useState } from "react";
 
 const HelpingList:HelpI[] = [
     {
@@ -104,13 +103,13 @@ const Categories: CategoryI[] = [
 export default function Home() {
     const [currentcategory, setCurrentCategory] = useState(1);
     // const { setIsOpen } = useNavbar();
-    // useEffect(() => {
-    //     setIsOpen(true);
-    //     return () => {
-    //         setIsOpen(false);
-    //     };
-    //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, []);
+	// const { setIsOpen: setIsNavigation } = useNavigation();
+	// useEffect(() => {
+	// 	setIsOpen(false);
+	// 	setIsNavigation(false);
+	// }, []);
+
+
 
     return (
         <div className="w-full flex flex-col pt-8 p-6 relative">

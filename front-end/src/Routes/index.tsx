@@ -30,7 +30,7 @@ const Router = () => {
         // },
         {
             path: "/app",
-            element: user && user._id ? <Layout /> : <Navigate to="/login" />,
+            element: user && user._id ? <Layout /> : <Navigate to="/auth/login" />,
             children: [
                 { path: "", element: <Home /> },
                 {
@@ -43,12 +43,12 @@ const Router = () => {
         },
 
         {
-            path: "/login",
+            path: "/auth/login",
             element: user ? <Navigate to="/app" /> : <LogIn />,
         },
         {
-            path: "logout",
-            element: user ? <Logout /> : <Navigate to="/login" />,
+            path: "auth/logout",
+            element: user ? <Logout /> : <Navigate to="/auth/login" />,
         },
 
         { path: "*", element: <Error404 /> },

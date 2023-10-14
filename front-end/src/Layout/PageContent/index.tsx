@@ -3,7 +3,8 @@ import { Outlet } from "react-router-dom";
 import { Suspense } from "react";
 import { useEffect } from "react";
 import SuspenseContent from "./SuspenseContent";
-import { Copyright } from "@/Components/Copyright";
+// import Header from "../Header";
+import Navigation from "../Navigation";
 
 function PageContent() {
 	// const { pageTitle } = useAppSelector((state) => state.header);
@@ -18,12 +19,13 @@ function PageContent() {
 
 	return (
 		<div className="drawer-content  overflow-hidden flex flex-col h-[100vh]">
-			<main className="lg:px-10 overflow-auto flex-1 overflow-y-auto pt-8  h-full flex flex-col">
+			{/* <Header /> */}
+			<main className="lg:px-10 overflow-auto flex-1 overflow-y-auto h-[calc(100vh-4rem)] flex flex-col relative no-scrollbar">
 				<Suspense fallback={<SuspenseContent />}>
 					<Outlet />
 				</Suspense>
-				<Copyright />
 			</main>
+			<Navigation />
 		</div>
 	);
 }

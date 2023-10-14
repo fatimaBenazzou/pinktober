@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import LogoutIcon from "@/icons/LogoutIcon";
 import { ProfileCircle } from "iconsax-react";
 
-function Profile({ user }: { user: UserI }) {
+export default function Profile({ user }: { user: UserI }) {
 	return (
 		<div className="dropdown dropdown-end ml-4">
 			<label tabIndex={999} htmlFor="profile-dropdown" className="btn btn-ghost btn-circle avatar">
@@ -33,7 +33,7 @@ function Profile({ user }: { user: UserI }) {
 				<li>
 					<div className="rounded-2xl">
 						<LogoutIcon className="" />
-						<Link to={"/logout"} role="menuitem">
+						<Link to={"/auth/logout"} role="menuitem">
 							<div className="w-max text-error">logout</div>
 						</Link>
 					</div>
