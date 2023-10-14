@@ -6,7 +6,7 @@ import RightSidebar from "./RightSidebar";
 function Layout() {
 	return (
 		<>
-			<div className="drawer lg:drawer-open overflow-hidden w-full h-screen bg-secondary text-secondary-content">
+			<div className="drawer lg:drawer-open overflow-hidden w-full h-screen bg-base-100 text-secondary-content">
 				<input id="left-sidebar-drawer" type="checkbox" className="drawer-toggle" />
 				<PageContent />
 				<LeftSidebar />
