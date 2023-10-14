@@ -5,6 +5,9 @@ import Home from "@/Pages/Home";
 import Chat from "@/Pages/Chat";
 import SelfExam from "@/Pages/SelfExam";
 import AiDoctor from "@/Pages/AiDoctor";
+import FormI from "@/Pages/AiDoctor/FormI";
+import Consult from "@/Pages/AiDoctor/Consult";
+import Good from "@/Pages/AiDoctor/Good";
 // import Auth from "@/Pages/Auth";
 
 const Error404 = lazy(() => import("@/Pages/Errors/Error404"));
@@ -37,6 +40,9 @@ const Router = () => {
                 { path: "", element: <Home /> },
                 { path: "self-exam", element: <SelfExam /> },
                 { path: "ai-doctor", element: <AiDoctor /> },
+                { path: "ai-doctor/form", element: <FormI /> },
+                { path: "ai-doctor/consult", element: <Consult /> },
+                { path: "ai-doctor/good", element: <Good /> },
                 {
                     path: "dashboard", // the url
                     element: <Dashboard />,
